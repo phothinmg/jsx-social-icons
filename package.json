@@ -12,7 +12,8 @@
   "scripts": {
     "check": "biome check --write src",
     "lint": "biome lint --write src && biome format --write src",
-    "react": "tsup --config react-tsup.config.ts --tsconfig react-tsconfig.json"
+    "react": "tsup --config react-tsup.config.ts --tsconfig react-tsconfig.json",
+    "pat": "pnpm version patch && pnpm publish"
   },
   "keywords": [
     "Social Icons",
