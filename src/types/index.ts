@@ -24,7 +24,9 @@ export interface Icons {
 		| "whatsapp"
 		| "wechat"
 		| "youtube"
-		| "wordpress";
+		| "wordpress"
+		| "jsfiddle"
+		| "mastodon";
 	d: string;
 }
 

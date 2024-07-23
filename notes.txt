@@ -1,3 +1,5 @@
+/* cspell:disable */
+
 tsup/8.2.2
 
 Usage:
@@ -54,3 +56,120 @@ Options:
   --cjsInterop                 Enable cjs interop 
   -h, --help                   Display this message 
   -v, --version                Display version number 
+
+  Disable Checking
+/* cSpell:disable */
+/* spell-checker: disable */
+/* spellchecker: disable */
+/* cspell: disable-line */
+/* cspell: disable-next-line */
+Enable Checking
+/* cSpell:enable */
+/* spell-checker: enable */
+/* spellchecker: enable */
+Example
+// cSpell:disable
+const wackyWord = ['zaallano', 'wooorrdd', 'zzooommmmmmmm'];
+/* cSpell:enable */
+
+// Nest disable / enable is not Supported
+
+// spell-checker:disable
+// It is now disabled.
+
+var liep = 1;
+
+
+// It is still disabled
+
+// cSpell:enable
+// It is now enabled
+
+const str = 'goededag'; // <- will be flagged as an error.
+
+// spell-checker:enable <- doesn't do anything
+
+// cSPELL:DISABLE <-- also works.
+
+// if there isn't an enable, spelling is disabled till the end of the file.
+const str = 'goedemorgen'; // <- will NOT be flagged as an error.
+
+Ignore
+Ignore allows you the specify a list of words you want to ignore within the document.
+
+// cSpell:ignore zaallano, wooorrdd
+// cSpell:ignore zzooommmmmmmm
+const wackyWord = ['zaallano', 'wooorrdd', 'zzooommmmmmmm'];
+
+Note: words defined with ignore will be ignored for the entire file.
+
+Words
+The words list allows you to add words that will be considered correct and will be used as suggestions.
+
+// cSpell:words woorxs sweeetbeat
+const companyName = 'woorxs sweeetbeat';
+
+Note: words defined with words will be used for the entire file.
+
+Enable / Disable compound words
+In some programming language it is common to glue words together.
+
+// cSpell:enableCompoundWords
+char * errormessage;  // Is ok with cSpell:enableCompoundWords
+int    errornumber;   // Is also ok.
+
+Note: Compound word checking cannot be turned on / off in the same file. The last setting in the file determines the value for the entire file.
+
+Excluding and Including Text to be checked.
+By default, the entire document is checked for spelling. cSpell:disable/cSpell:enable above allows you to block off sections of the document. ignoreRegExp and includeRegExp give you the ability to ignore or include patterns of text. By default the flags gim are added if no flags are given.
+
+The spell checker works in the following way:
+
+Find all text matching includeRegExp
+Remove any text matching excludeRegExp
+Check the remaining text.
+Exclude Example
+// cSpell:ignoreRegExp 0x[0-9a-f]+     -- will ignore c style hex numbers
+// cSpell:ignoreRegExp /0x[0-9A-F]+/g  -- will ignore upper case c style hex numbers.
+// cSpell:ignoreRegExp g{5} h{5}       -- will only match ggggg, but not hhhhh or 'ggggg hhhhh'
+// cSpell:ignoreRegExp g{5}|h{5}       -- will match both ggggg and hhhhh
+// cSpell:ignoreRegExp /g{5} h{5}/     -- will match 'ggggg hhhhh'
+/* cSpell:ignoreRegExp /n{5}/          -- will NOT work as expected because of the ending comment -> */
+/*
+   cSpell:ignoreRegExp /q{5}/          -- will match qqqqq just fine but NOT QQQQQ
+*/
+// cSpell:ignoreRegExp /[^\s]{40,}/    -- will ignore long strings with no spaces.
+// cSpell:ignoreRegExp Email           -- this will ignore email like patterns -- see Predefined RegExp expressions
+var encodedImage = 'HR+cPzr7XGAOJNurPL0G8I2kU0UhKcqFssoKvFTR7z0T3VJfK37vS025uKroHfJ9nA6WWbHZ/ASn...';
+var email1 = 'emailaddress@myfancynewcompany.com';
+var email2 = '<emailaddress@myfancynewcompany.com>';
+
+Note: ignoreRegExp and includeRegExp are applied to the entire file. They do not start and stop.
+
+Include Example
+In general you should not need to use includeRegExp. But if you are mixing languages then it could come in helpful.
+
+# cSpell:includeRegExp #.*
+# cSpell:includeRegExp /(["]{3}|[']{3})[^\1]*?\1/g
+# only comments and block strings will be checked for spelling.
+def sum_it(self, seq):
+    """This is checked for spelling"""
+    variabele = 0
+    alinea = 'this is not checked'
+    for num in seq:
+        # The local state of 'value' will be retained between iterations
+        variabele += num
+        yield variabele
+
+Predefined RegExp expressions
+Exclude patterns
+Urls1 -- Matches urls
+HexValues -- Matches common hex format like #aaa, 0xfeef, \u0134
+EscapeCharacters1 -- matches special characters: \n, \t etc.
+Base641 -- matches base64 blocks of text longer than 40 characters.
+Email -- matches most email addresses.
+Include Patterns
+Everything1 -- By default we match an entire document and remove the excludes.
+string -- This matches common string formats like '...', "...", and `...`
+CStyleComment -- These are C Style comments /* */ and //
+PhpHereDoc -- This matches PHPHereDoc strings.
