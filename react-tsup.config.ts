@@ -13,9 +13,6 @@ export default defineConfig({
   clean: true,
   metafile: true,
   external: ["react"],
-  minifyWhitespace: true,
-  minifySyntax: true,
-  minifyIdentifiers: true,
   esbuildPlugins: [
     babel({
       config: {
