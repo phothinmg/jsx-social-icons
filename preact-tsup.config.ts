@@ -3,8 +3,8 @@ import { defineConfig } from "tsup";
 // @ts-ignore
 import babel from "esbuild-plugin-babel";
 export default defineConfig({
-  entry: ["src/react/index.tsx"],
-  outDir: "./dist/react",
+  entry: ["src/preact/index.tsx"],
+  outDir: "./dist/preact",
   splitting: true,
   sourcemap: true,
   dts: true,
@@ -13,7 +13,8 @@ export default defineConfig({
   treeshake: true,
   clean: true,
   metafile: true,
-  external: ["react"],
+  external: ["preact"],
+  jsxFragment:"Fragment",
   esbuildPlugins: [
     babel({
       config: {
@@ -33,7 +34,13 @@ export default defineConfig({
         ],
         plugins: [
           "@babel/plugin-transform-typescript",
-          "@babel/plugin-transform-react-jsx",
+          [
+            "@babel/plugin-transform-react-jsx",
+            {
+              pragma: "h",
+              pragmaFrag: "Fragment",
+            },
+          ],
           [
             "@babel/plugin-transform-template-literals",
             {

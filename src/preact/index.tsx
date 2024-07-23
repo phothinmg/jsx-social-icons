@@ -1,8 +1,11 @@
-import React, { type JSX, Suspense, useEffect, useState } from "react";
+import { type JSX, h } from "preact";
+import { Suspense } from "preact/compat";
+import React from "preact/compat";
+import { useEffect, useState } from "preact/hooks";
 import { getPathd } from "../icons/icons";
 import type { JsxSocialIconProps } from "../types";
 
-export default function ReactSocialIcon({
+export default function PreactSocialIcon({
 	name,
 	href = "#",
 	target = "_blank",

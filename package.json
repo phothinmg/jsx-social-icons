@@ -1,7 +1,7 @@
 {
   "name": "jsx-social-icons",
   "version": "1.0.4",
-  "description": "Social icons with link for jsx-runtimes, from Simple Icons",
+  "description": "Social icons with link for jsx-runtime, from Simple Icons",
   "exports": {
     "./react": {
       "types": "./dist/react/index.d.ts",
@@ -10,9 +10,9 @@
   },
   "type": "module",
   "scripts": {
-    "check": "biome check --write src",
-    "lint": "biome lint --write src && biome format --write src",
+    "check": "biome check --write src && biome format --write src",
     "react": "tsup --config react-tsup.config.ts --tsconfig react-tsconfig.json",
+    "preact": "tsup --config preact-tsup.config.ts --tsconfig preact-tsconfig.json",
     "pat": "pnpm version patch && pnpm publish"
   },
   "keywords": [
@@ -43,6 +43,7 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "preact": "^10.23.0",
     "react": "^18.3.1"
   },
   "pnpm": {
