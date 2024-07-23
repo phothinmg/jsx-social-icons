@@ -11,7 +11,6 @@ export interface Icons {
 		| "twitter-X"
 		| "facebook"
 		| "discord"
-		| "disroot"
 		| "linkedin"
 		| "line"
 		| "dev-to"
