@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true,
+          "node": "current"
+        },
+        "modules": false
+      }
+    ],
+    ["@babel/preset-typescript"],
+    ["@babel/preset-react"]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-typescript",
+    "@babel/plugin-transform-react-jsx",
+    "@babel/template",
+    "@babel/plugin-transform-react-inline-elements",
+    "@babel/plugin-transform-react-constant-elements"
+  ]
+}

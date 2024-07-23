@@ -1,0 +1,53 @@
+{
+  "name": "jsx-social-icons",
+  "version": "1.0.2",
+  "description": "Social icons with link for jsx-runtimes, from Simple Icons",
+  "exports": {
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "check": "biome check --write src",
+    "lint": "biome lint --write src && biome format --write src",
+    "react": "tsup --config react-tsup.config.ts --tsconfig react-tsconfig.json"
+  },
+  "keywords": [
+    "Social Icons",
+    "Simple Icons",
+    "React",
+    "Preact",
+    "Hono"
+  ],
+  "author": "Pho Thin Mg",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.9",
+    "@babel/plugin-transform-react-constant-elements": "^7.24.7",
+    "@babel/plugin-transform-react-inline-elements": "^7.24.7",
+    "@babel/plugin-transform-react-jsx": "^7.24.7",
+    "@babel/plugin-transform-template-literals": "^7.24.7",
+    "@babel/plugin-transform-typescript": "^7.24.8",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "esbuild-plugin-babel": "^0.2.3",
+    "tsup": "^8.2.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "react": "^18.3.1"
+  },
+  "pnpm": {
+    "allowedDeprecatedVersions": {
+      "glob": "7.2.3",
+      "inflight": "1.0.6"
+    }
+  }
+}
