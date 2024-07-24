@@ -222,3 +222,44 @@ Options:
   --out-file-extension [string]               Use a specific extension for the output files
   -V, --version                               output the version number
   -h, --help                                  display help for command
+
+
+  ===========================================
+
+import PreactSocialIcon from "jsx-social-icons/preact";
+
+export function Home() {
+  return (
+    <div>
+      <PreactSocialIcon
+        name="github"
+        href="https://github.com"
+        size={36}
+        fillColor="#673ab8"
+        fillOpacity={0.9}
+        title="Link to my github profile"
+        target="_blank"
+        className="My class"
+      />
+    </div>
+  );
+}
+
+import ReactSocialIcon from "jsx-social-icons/react";
+
+export  function Home() {
+  return (
+    <main>
+      <ReactSocialIcon
+        name="github"
+        href="https://github.com"
+        size={36}
+        fillColor="#673ab8"
+        fillOpacity={0.9}
+        title="Link to my github profile"
+        target="_blank"
+        className="My class"
+      />
+    </main>
+  );
+}

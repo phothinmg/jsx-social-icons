@@ -1,5 +1,5 @@
 // biome-ignore lint/style/useImportType: <explanation>
-import React, {Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import type { IconName, Icons } from "./icons.js";
 import { icons } from "./icons.js";
 
@@ -126,23 +126,21 @@ export default function ReactSocialIcon({
     setTitle(title);
   }, [title]);
   return (
-    <Suspense fallback={<p>Loading</p>}>
-      <a
-        href={link}
-        style={{ textDecoration: "none", color: "currentcolor" }}
-        className={cname}
-        target={tg}
+    <a
+      href={link}
+      style={{ textDecoration: "none", color: "currentcolor" }}
+      className={cname}
+      target={tg}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width={sz}
+        height={sz}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width={sz}
-          height={sz}
-        >
-          <title>{tit}</title>
-          <path d={pathd} fill={color} fillOpacity={opacity} />
-        </svg>
-      </a>
-    </Suspense>
+        <title>{tit}</title>
+        <path d={pathd} fill={color} fillOpacity={opacity} />
+      </svg>
+    </a>
   );
 }
