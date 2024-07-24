@@ -1,6 +1,7 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import { h } from "preact";
 import React from "preact/compat";
+import { Suspense } from "preact/compat";
 import { useEffect, useState } from "preact/hooks";
 
 //---
@@ -130,21 +131,23 @@ export default function PreactSocialIcon({
     setTitle(title);
   }, [title]);
   return (
-    <a
-      href={link}
-      style={{ textDecoration: "none", color: "currentcolor" }}
-      className={cname}
-      target={tg}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        width={sz}
-        height={sz}
+    <Suspense fallback={<p>Loading...</p>}>
+      <a
+        href={link}
+        style={{ textDecoration: "none", color: "currentcolor" }}
+        className={cname}
+        target={tg}
       >
-        <title>{tit}</title>
-        <path d={pathd} fill={color} fillOpacity={opacity} />
-      </svg>
-    </a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width={sz}
+          height={sz}
+        >
+          <title>{tit}</title>
+          <path d={pathd} fill={color} fillOpacity={opacity} />
+        </svg>
+      </a>
+    </Suspense>
   );
 }
