@@ -2,32 +2,31 @@
 const raw = String.raw;
 
 export type IconName =
-  | ""
-  | "github"
-  | "gitlab"
-  | "gitbook"
-  | "codepen"
-  | "codesandbox"
-  | "hashnode"
-  | "twitter-X"
-  | "facebook"
-  | "discord"
-  | "linkedin"
-  | "line"
-  | "dev-to"
-  | "medium"
-  | "slack"
-  | "stackoverflow"
-  | "stack-edit"
-  | "messenger"
-  | "viber"
-  | "telegram"
-  | "whatsapp"
-  | "wechat"
-  | "youtube"
-  | "wordpress"
-  | "jsfiddle"
-  | "mastodon";
+| "codepen"
+| "codesandbox"
+| "dev-to"
+| "discord"
+| "facebook"
+| "gitbook"
+| "github"
+| "gitlab"
+| "hashnode"
+| "jsfiddle"
+| "line"
+| "linkedin"
+| "mastodon"
+| "medium"
+| "messenger"
+| "slack"
+| "stackedit"
+| "stackoverflow"
+| "telegram"
+| "viber"
+| "wechat"
+| "whatsapp"
+| "wordpress"
+| "youtube"
+| "twitter-X";
 
 export interface Icons {
   name: IconName;
@@ -105,7 +104,7 @@ export const icons: Array<Icons> = [
     d: raw`M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.092-10.473-2.203zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154Z`,
   },
   {
-    name: "stack-edit",
+    name: "stackedit",
     d: raw`M6 0C2.689 0 0 2.689 0 6v12c0 3.311 2.689 6 6 6h12c3.311 0 6-2.689 6-6V6c0-3.311-2.689-6-6-6H6zm.227 1.871h11.546A3.98 3.98 0 0 1 21.75 5.85v11.545a3.978 3.978 0 0 1-3.977 3.976H6.227a3.978 3.978 0 0 1-3.977-3.976V5.85a3.98 3.98 0 0 1 3.977-3.98zm-.223 2.31V6.01H4.633V7.7h1.37v1.903h-1.37v1.689h1.37v1.828h1.4v-1.828h1.695v1.828h1.398v-1.828h1.371v-1.69h-1.37v-1.9h1.37V6.01h-1.37V4.182h-1.4V6.01H7.403V4.182H6.004zm1.398 3.52h1.696v1.903H7.402V7.7z`,
   },
   {
