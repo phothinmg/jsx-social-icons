@@ -4,7 +4,7 @@ import React, { useEffect, useState, Suspense } from "react";
 import type { IconName, Icons } from "./icons.js";
 import { icons } from "./icons.js";
 
-interface JsxSocialIconProps {
+export interface JsxSocialIconProps {
   /**
    * ```
    * 'Name of icon'
@@ -83,6 +83,42 @@ const getPathd = (name: IconName): string => {
   const pd = icons.find((i) => i.name === name) as Icons;
   return pd.d;
 };
+
+/**
+ * #### Component for rendering a social media icon with customizable properties.
+ *
+ * @param name - The name of the icon to display.
+ * @param href - The URL the icon should link to.
+ * @param target - The target attribute for the link.
+ * @param fillColor - The color to fill the icon.
+ * @param fillOpacity - The opacity of the fill color.
+ * @param className - Additional CSS class for styling.
+ * @param size - The size of the icon.
+ * @param title - The title attribute for accessibility.
+ *
+ * @returns The JSX element representing the social media icon with the specified properties.
+ * 
+ * ```ts
+ * import ReactSocialIcon from "jsx-social-icons/react";
+ * 
+ * export function Home() {
+        return (
+          <main>
+            <ReactSocialIcon
+              name="github"
+              href="https://github.com"
+              size={36}
+              fillColor="#673ab8"
+              fillOpacity={0.9}
+              title="Link to my github profile"
+              target="_blank"
+              className="My class"
+            />
+          </main>
+        );
+      }
+ * ```
+ */
 
 export default function ReactSocialIcon({
   name,
