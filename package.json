@@ -6,13 +6,19 @@
     "./react": {
       "types": "./dist/react/index.d.ts",
       "import": "./dist/react/index.js"
+    },
+    "./preact": {
+      "types": "./dist/preact/index.d.ts",
+      "import": "./dist/preact/index.js"
     }
   },
   "type": "module",
   "scripts": {
     "check": "biome check --write src && biome format --write src",
-    "react": "tsup --config react-tsup.config.ts --tsconfig react-tsconfig.json",
-    "preact": "tsup --config preact-tsup.config.ts --tsconfig preact-tsconfig.json",
+    "check:build": "biome check --write src && biome format --write src",
+    "react": "./build/react.js",
+    "preact": "./build/preact.js",
+    "hono": "tsup --config hono-tsup.config.ts --tsconfig hono-tsconfig.json",
     "pat": "pnpm version patch && pnpm publish"
   },
   "keywords": [
@@ -38,11 +44,13 @@
     "@biomejs/biome": "^1.8.3",
     "@types/node": "^20.14.11",
     "@types/react": "^18.3.3",
+    "babel-preset-minify": "^0.5.2",
+    "dax-sh": "^0.41.0",
     "esbuild-plugin-babel": "^0.2.3",
-    "tsup": "^8.2.2",
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "hono": "^4.5.1",
     "preact": "^10.23.0",
     "react": "^18.3.1"
   },

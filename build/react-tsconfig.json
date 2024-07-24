@@ -8,12 +8,11 @@
     "skipLibCheck": true,
     "jsx": "react",
     "module": "ESNext",
-    "declaration": true,
-    "declarationDir": "types",
-    "sourceMap": true,
-    "outDir": "dist/react",
+    "outDir": "../opt/tsc",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true
-  }
+    "declaration": true,
+    "declarationDir": "../dist/react"
+  },
+  "include": ["../src/react/index.tsx"]
 }

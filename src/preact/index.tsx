@@ -1,9 +1,92 @@
-import { type JSX, h } from "preact";
+// biome-ignore lint/style/useImportType: <explanation>
+import { h } from "preact";
 import { Suspense } from "preact/compat";
 import React from "preact/compat";
 import { useEffect, useState } from "preact/hooks";
-import { getPathd } from "../icons/icons";
-import type { JsxSocialIconProps } from "../types";
+
+//---
+import type { IconName, Icons } from "./icons.js";
+import { icons } from "./icons.js";
+
+interface JsxSocialIconProps {
+  /**
+   * ```
+   * 'Name of icon'
+   * ```
+   */
+  name: Icons["name"];
+  // Anchor Element
+  /**
+   * ```
+   * 'HTML Anchor Element Attribute "href"'
+   * ```
+   *
+   * ```html
+   * <a href=""></a>
+   *
+   * ```
+   */
+  href?: string;
+  /**
+   * ```
+   * 'HTML Anchor Element Attribute "target"'
+   * ```
+   *
+   * ```html
+   * <a href="" target=""></a>
+   *
+   * ```
+   */
+  target?: "_blank" | "_parent" | "_self" | "_top";
+  /**
+   * ```
+   * 'HTML Anchor Element `className`'
+   * ```
+   *
+   * ```
+   * 'Default style - {textDecoration: none, color: currentcolor }'
+   * ```
+   *
+   * ```html
+   *
+   * <a href="" target="" className=""></a>
+   *
+   * ```
+   */
+  className?: string;
+  // Icon
+  /**
+   * ```
+   * 'Size for icon - default - 24'
+   * ```
+   */
+  size?: number;
+  /**
+   * ```
+   * 'Color for icon - default - "currentcolor"'
+   * ```
+   */
+  fillColor?: string;
+  /**
+   * ```
+   * 'Opacity of icon. 0.1 to 1 > default 0.7'
+   * ```
+   */
+  fillOpacity?: 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1;
+  /**
+   * ```
+   * 'Tooltip text for icon. default name of icon .'
+   * ```
+   *
+   *
+   */
+  title?: string;
+}
+
+const getPathd = (name: IconName): string => {
+  const pd = icons.find((i) => i.name === name) as Icons;
+  return pd.d;
+};
 
 export default function PreactSocialIcon({
 	name,
@@ -14,7 +97,7 @@ export default function PreactSocialIcon({
 	className = "",
 	size = 24,
 	title = name,
-}: JsxSocialIconProps): JSX.Element {
+}: JsxSocialIconProps): h.JSX.Element {
 	const [pathd, setPathd] = useState<string>(() => getPathd(name));
 	const [opacity, setOpacity] = useState<number>(fillOpacity);
 	const [color, setColor] = useState<string>(fillColor);

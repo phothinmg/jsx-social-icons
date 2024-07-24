@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json.schemastore.org/babelrc",
   "presets": [
     [
       "@babel/preset-env",
@@ -10,13 +11,25 @@
         "modules": false
       }
     ],
+    ["minify", { "keepFnName": true }],
     ["@babel/preset-typescript"],
     ["@babel/preset-react"]
   ],
   "plugins": [
     "@babel/plugin-transform-typescript",
-    "@babel/plugin-transform-react-jsx",
-    "@babel/template",
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "h",
+        "pragmaFrag": "Fragment"
+      }
+    ],
+    [
+      "@babel/plugin-transform-template-literals",
+      {
+        "loose": true
+      }
+    ],
     "@babel/plugin-transform-react-inline-elements",
     "@babel/plugin-transform-react-constant-elements"
   ]

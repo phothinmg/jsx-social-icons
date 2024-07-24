@@ -5,15 +5,14 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "skipLibCheck": true,
+    "jsx": "react",
     "module": "ESNext",
-    "declaration": true,
-    "declarationDir": "types",
-    "sourceMap": true,
-    "outDir": "dist/preact",
+    "outDir": "../opt/tsc",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
-    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "../dist/preact",
     "baseUrl": "./",
     "paths": {
       "react": ["./node_modules/preact/compat/"],
@@ -21,5 +20,6 @@
       "react-dom": ["./node_modules/preact/compat/"],
       "react-dom/*": ["./node_modules/preact/compat/*"]
     }
-  }
+  },
+  "include": ["../src/preact/index.tsx"]
 }
