@@ -1,10 +1,7 @@
 # Jsx Social Icons with link
 
-All of these icons are from simple icons - https://simpleicons.org/ - https://github.com/simple-icons/simple-icons
-
-License - https://github.com/simple-icons/simple-icons?tab=CC0-1.0-1-ov-file#cc0-10-universal
-
-Legal Disclaimer : https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md#disclaimer
+![svg](./icons/codepen.svg) ![svg](./icons/codesandbox.svg) ![svg](./icons/devdotto.svg) ![discord](./icons/discord.svg) ![svg](./icons/gitlab.svg)
+![facebook](./icons/facebook.svg) ![svg](./icons/github.svg) 
 
 ## Install
 
@@ -19,8 +16,6 @@ pnpm i jsx-social-icons
 ```bash
 yarn add  jsx-social-icons
 ```
-
-
 
 ## React
 
@@ -67,3 +62,25 @@ export function Home() {
   );
 }
 ```
+
+## Options
+
+| Name          | Description                            |    Default     |
+| ------------- | -------------------------------------- | :------------: |
+| `name`        | Name of icon                           |                |
+| `href`        | HTML Anchor Element Attribute "href"   |     " # "      |
+| `target`      | HTML Anchor Element Attribute "target" |   "\_blank"    |
+| `className`   | HTML Anchor Element "className"        |      " "       |
+| `title`       | Tooltip text for icon                  |  name of icon  |
+| `size`        | Size for icon                          |       24       |
+| `fillColor`   | Color for icon                         | "currentcolor" |
+| `fillOpacity` | Opacity of icon. 0.1 to 1              |      0.7       |
+
+
+***
+
+All of these icons are from simple icons - https://simpleicons.org/ - https://github.com/simple-icons/simple-icons
+
+License - https://github.com/simple-icons/simple-icons?tab=CC0-1.0-1-ov-file#cc0-10-universal
+
+Legal Disclaimer : https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md#disclaimer

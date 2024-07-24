@@ -10,3 +10,5 @@ a.tsx
 .gitignore
 a.js
 build
+.vscode
+biome.jsonc
