@@ -119,7 +119,7 @@ export default function PreactSocialIcon({
   name,
   href = "#",
   target = "_blank",
-  fillColor = "currentcolor",
+  fillColor = "currentColor",
   fillOpacity = 0.7,
   className = "",
   size = 24,
