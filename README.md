@@ -6,12 +6,16 @@
 ![svg](https://cdn.phothin.dev/icons/jsfiddle.svg) 
 
 ![svg](https://cdn.phothin.dev/icons/line.svg) ![svg](https://cdn.phothin.dev/icons/linkedin.svg) ![svg](https://cdn.phothin.dev/icons/mastodon.svg)
-![svg](https://cdn.phothin.dev/icons/medium.svg) ![svg](https://cdn.phothin.dev/icons/messenger.svg) ![svg](https://cdn.phothin.dev/icons/slack.svg)
+![svg](https://cdn.phothin.dev/icons/medium.svg) ![svg](https://cdn.phothin.dev/icons/messenger.svg) ![svg](https://pub-d94f06e647584b8496cac0d43a6fecfb.r2.dev/icons/slack.svg)
 ![svg](https://cdn.phothin.dev/icons/stackedit.svg) ![svg](https://cdn.phothin.dev/icons/stackoverflow.svg) ![svg](https://cdn.phothin.dev/icons/telegram.svg)
 ![svg](https://cdn.phothin.dev/icons/viber.svg) 
 
 ![svg](https://cdn.phothin.dev/icons/wechat.svg) ![svg](https://cdn.phothin.dev/icons/whatsapp.svg) ![svg](https://cdn.phothin.dev/icons/wordpress.svg)
 ![svg](https://cdn.phothin.dev/icons/youtube.svg) ![svg](https://cdn.phothin.dev/icons/x.svg) 
+
+
+***
+
 
 
 ## Install
@@ -30,7 +34,7 @@ yarn add  jsx-social-icons
 
 ## React
 
-```ts
+```tsx
 import ReactSocialIcon from "jsx-social-icons/react";
 
 export function Home() {
@@ -53,7 +57,7 @@ export function Home() {
 
 ## Preact
 
-```ts
+```tsx
 import PreactSocialIcon from "jsx-social-icons/preact";
 
 export function Home() {

@@ -8,7 +8,7 @@ import { useEffect, useState } from "preact/hooks";
 import type { IconName, Icons } from "./icons.js";
 import { icons } from "./icons.js";
 
-interface JsxSocialIconProps {
+export interface JsxSocialIconProps {
   /**
    * ```
    * 'Name of icon'
@@ -88,6 +88,33 @@ const getPathd = (name: IconName): string => {
   return pd.d;
 };
 
+/**
+ * ### Social icons component for Preact jsx-runtime.
+ * 
+ * 
+ * Usage
+ * 
+ * ```tsx
+ * import PreactSocialIcon from "jsx-social-icons/preact";
+
+    export function Home() {
+      return (
+        <div>
+          <PreactSocialIcon
+            name="github"
+            href="https://github.com"
+            size={36}
+            fillColor="#673ab8"
+            fillOpacity={0.9}
+            title="Link to my github profile"
+            target="_blank"
+            className="My class"
+          />
+        </div>
+      );
+    }
+ * ```
+ */
 export default function PreactSocialIcon({
   name,
   href = "#",
