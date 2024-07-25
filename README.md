@@ -1,17 +1,6 @@
 # Jsx Social Icons with link
 
-![svg](https://cdn.phothin.dev/icons/codepen.svg) ![svg](https://cdn.phothin.dev/icons/codesandbox.svg) ![svg](https://cdn.phothin.dev/icons/devdotto.svg)
-![svg](https://cdn.phothin.dev/icons/discord.svg) ![svg](https://cdn.phothin.dev/icons/facebook.svg) ![svg](https://cdn.phothin.dev/icons/gitbook.svg)
-![svg](https://cdn.phothin.dev/icons/github.svg) ![svg](https://cdn.phothin.dev/icons/gitlab.svg) ![svg](https://cdn.phothin.dev/icons/hashnode.svg)
-![svg](https://cdn.phothin.dev/icons/jsfiddle.svg) 
-
-![svg](https://cdn.phothin.dev/icons/line.svg) ![svg](https://cdn.phothin.dev/icons/linkedin.svg) ![svg](https://cdn.phothin.dev/icons/mastodon.svg)
-![svg](https://cdn.phothin.dev/icons/medium.svg) ![svg](https://cdn.phothin.dev/icons/messenger.svg) ![svg](https://pub-d94f06e647584b8496cac0d43a6fecfb.r2.dev/icons/slack.svg)
-![svg](https://cdn.phothin.dev/icons/stackedit.svg) ![svg](https://cdn.phothin.dev/icons/stackoverflow.svg) ![svg](https://cdn.phothin.dev/icons/telegram.svg)
-![svg](https://cdn.phothin.dev/icons/viber.svg) 
-
-![svg](https://cdn.phothin.dev/icons/wechat.svg) ![svg](https://cdn.phothin.dev/icons/whatsapp.svg) ![svg](https://cdn.phothin.dev/icons/wordpress.svg)
-![svg](https://cdn.phothin.dev/icons/youtube.svg) ![svg](https://cdn.phothin.dev/icons/x.svg) 
+![ss](./jsxicon.png)
 
 
 ***
