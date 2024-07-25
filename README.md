@@ -1,6 +1,6 @@
 # Jsx Social Icons with link
 
-![ss](./jsxicon.png)
+![ss](https://imagedelivery.net/6bSk6wUa9UOwEesJAZQuoA/10316b5d-ee6d-4980-a63e-fd98d0eed200/public)
 
 
 ***
